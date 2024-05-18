@@ -75,8 +75,8 @@ layout = html.Div([
                           style = {'height': '90vh'}
                           )
             ], style={'height': '90vh'})
-        ], style={'height': '90vh', 'marginTop': '56px'})  # Adjusted marginTop to account for fixed navbar height
-    ], fluid=True, style={'padding': '20px 0 0 0', 'margin': 0, 'height': '40%'}),  # Added padding to the top of the container
+        ], style={'height': '90vh', 'marginTop': '56px'}) 
+    ], fluid=True, style={'padding': '20px 0 0 0', 'margin': 0, 'height': '40%'}), 
 ],
 )
 

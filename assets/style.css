@@ -134,59 +134,35 @@ a#home-bar.navbar-brand {
     }
 }
 @media screen and (max-width: 800px) {
-    .mangrove-graph-component, .figure-desc {
-        display: none !important;
-    }
-    #git-logo {
-        padding-left: 5% !important;
-    }
-    
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 20%;
+        min-height: 20%;
+      }
    
 }
 @media screen and (max-width: 768px) {
-    .mangrove-graph-component, .figure-desc {
-        display: none !important;
-    }
-    .home-rows {
-        display: flex;
-        flex-direction: column;
-        font-size: 80% !important;
-    }
-    #git-logo {
-        padding-left: 5% !important;
-    }
-    .local-nav-items {
-        display: flex;
-        flex-direction: row;
-        font-size: 50%;
-    }
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 10%;
+        min-height: 10%;
+      }
 }
 
 
 @media screen and (max-width: 640px) {
-    .logo, .mangrove-graph-component, .figure-desc {
-        display: none !important;
-    }
-    /* span.navbar-toggler-icon, .nav-link {
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    } */
 
-    .home-rows {
-        display: flex !important;
-        flex-direction: column !important;
-        background-image: url('mangrove_1.png');
-        font-size: 100%;
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 5%;
+        min-height: 5%;
+      }
 
-    }
-
-    .git{
-        display: flex  !important;
-        flex-direction: row !important;
-        width: 50% !important;
-        align-items: center !important;
-    }
 }
 
