@@ -22,6 +22,8 @@ app = Dash(__name__, meta_tags = meta_tags, external_stylesheets = stylesheets, 
 # Set up favicon 
 app._favicon = 'assets/fish.png'
 
+# Set up server 
+server = app.server 
 # Define the layout of the app
 app.layout = html.Div([
     dash.page_container
@@ -29,5 +31,5 @@ app.layout = html.Div([
 
 
 if __name__ == '__main__':
-    app.run_server(debug = True, port = 9090)
+    app.run()
 
