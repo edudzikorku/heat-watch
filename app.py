@@ -20,7 +20,7 @@ stylesheets = [static_css, dbc.themes.DARKLY, dbc.icons.FONT_AWESOME]
 app = Dash(__name__, meta_tags = meta_tags, external_stylesheets = stylesheets, use_pages = True, pages_folder = 'pages')
 
 # Set up favicon 
-app._favicon = './assets/fish.png'
+app._favicon = './fish.png'
 
 # Set up server 
 server = app.server 
