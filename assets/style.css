@@ -1,0 +1,192 @@
+/* Custom fonts
+/* Import Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Style the video: 100% width and height to cover the entire window */
+
+/* Ensure the video element is fixed and covers the entire viewport */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Google Sans */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#index-bg {
+    position: top-;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("../images/background.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+ 
+#index-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+}
+
+
+#index-info {
+    width: 80%;
+    text-align: center;
+    
+} 
+
+ h1 {
+    background-color: #457b9d;
+    color: white;
+    padding: 1vw 2vw;
+    font-size: 5vw;
+    clear: both;
+}
+
+h2 {
+    margin-top: 2vw;
+    font-size: 3vw;
+    color: #f4d58d;
+    font-weight: bold;
+}
+
+strong { font-weight: 800; }
+
+
+a {
+    display: inline-block;
+    width: auto;
+    transition-property: background-color;
+    transition-duration: 1000ms;
+    background-color: #457b9d;
+    font-size: 2.5vw;
+    margin: 5vw 1vw 0 1vw;
+    padding: 1.5vw 3vw;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    /* transition-property: background-color; */
+    transition-duration: 1000ms;
+    /* background-color: rgb(107, 168, 67); */
+    text-decoration: underline !important;
+    transform: scale(1.05) !important;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+#heat-map {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#nav-bar {
+    height: 12px;
+}
+
+a#home-bar.navbar-brand {
+    top: 0 !important;
+    position: fixed;
+    margin-top: 1%;
+    color: 'red' !important;
+}
+
+/* ****************************Media Queries*************************************** */
+
+@media screen and (max-width: 1526px) {}
+@media screen and (max-width: 1280px) {
+    .local-nav-items {
+        display: flex  !important;
+        flex-direction: column !important;
+    }
+}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 921px) {
+    .mangrove-graph-component, .figure-desc {
+        display: none !important;
+    }
+    #git-logo {
+        padding-left: 5% !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    .mangrove-graph-component, .figure-desc {
+        display: none !important;
+    }
+    #git-logo {
+        padding-left: 5% !important;
+    }
+    
+   
+}
+@media screen and (max-width: 768px) {
+    .mangrove-graph-component, .figure-desc {
+        display: none !important;
+    }
+    .home-rows {
+        display: flex;
+        flex-direction: column;
+        font-size: 80% !important;
+    }
+    #git-logo {
+        padding-left: 5% !important;
+    }
+    .local-nav-items {
+        display: flex;
+        flex-direction: row;
+        font-size: 50%;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .logo, .mangrove-graph-component, .figure-desc {
+        display: none !important;
+    }
+    /* span.navbar-toggler-icon, .nav-link {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .home-rows {
+        display: flex !important;
+        flex-direction: column !important;
+        background-image: url('mangrove_1.png');
+        font-size: 100%;
+
+    }
+
+    .git{
+        display: flex  !important;
+        flex-direction: row !important;
+        width: 50% !important;
+        align-items: center !important;
+    }
+}
+
