@@ -29,7 +29,10 @@ layout = html.Div([
                     ], href = "/heatmap"),
                     html.A([
                         html.Span("Get Data")
-                    ], href = "https://drive.google.com/drive/folders/17MJywbMg7zSjCM52opad95Vjen8qDd3U?usp=drive_link", target = "_blank")
+                    ], href = "https://drive.google.com/drive/folders/17MJywbMg7zSjCM52opad95Vjen8qDd3U?usp=drive_link", target = "_blank"),
+                    html.A([
+                        html.Span("View Raw Data")
+                    ], href = "/table")
                 ], id = "index-info")
             ], className = "d-flex h-100 w-100 justify-content-center align-items-center")
         ], id = "index-overlay")
