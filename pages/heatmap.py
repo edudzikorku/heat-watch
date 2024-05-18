@@ -5,7 +5,6 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import plotly.graph_objects as go
 from dash import html, dcc, Input, Output, callback
-from my_secrets import mapbox_token
 
 # Load data once
 data_dir = "./data/trawlers.csv"
@@ -30,7 +29,6 @@ def initial_fig():
             zoom = 8,
             bearing = 0,
             pitch = 0,
-            accesstoken = mapbox_token,
         ),
     )
     # Create the figure
