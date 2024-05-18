@@ -1,13 +1,6 @@
 # Imports 
 import dash
-import pandas as pd 
-import geopandas as gpd 
-import dash_leaflet as dl 
-import plotly.express as px
-from dash import Dash, html, dcc
-import dash_loading_spinners as dls 
-import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output 
+from dash import html
 
 # Register page 
 dash.register_page(__name__, path = '/', top_nav = True)

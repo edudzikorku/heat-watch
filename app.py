@@ -24,6 +24,7 @@ app._favicon = 'assets/fish.png'
 
 # Set up server 
 server = app.server 
+
 # Define the layout of the app
 app.layout = html.Div([
     dash.page_container
