@@ -36,7 +36,7 @@ layout = html.Div([
                     ], href = "/heatmap"),
                     html.A([
                         html.Span("Get Data")
-                    ], href = "https://github.com")
+                    ], href = "https://github.com/edudzikorku/heat-watch/tree/main/data")
                 ], id = "index-info")
             ], className = "d-flex h-100 w-100 justify-content-center align-items-center")
         ], id = "index-overlay")
