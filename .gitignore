@@ -4,4 +4,5 @@ Lib/
 Scripts/
 share/
 pyvenv.cfg/
-my_secrets.py
+my_secrets.py/
+app_copy.py

@@ -28,8 +28,8 @@ layout = html.Div([
                         html.Span("Open App")
                     ], href = "/heatmap"),
                     html.A([
-                        html.Span("Get Data")
-                    ], href = "https://drive.google.com/drive/folders/17MJywbMg7zSjCM52opad95Vjen8qDd3U?usp=drive_link", target = "_blank"),
+                        html.Span("View Time Series")
+                    ], href = "/series"),
                     html.A([
                         html.Span("View Raw Data")
                     ], href = "/table")
