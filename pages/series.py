@@ -76,9 +76,10 @@ layout = html.Div([
                           )
             ], style={'height': '90vh'})
         ], style={'height': '90vh', 'marginTop': '56px'}) 
-    ], fluid=True, style={'padding': '20px 0 0 0', 'margin': 0, 'height': '40%'}), 
+    ], fluid=True, style={'padding': '20px 0 0 0', 'margin': 0, 'height': '100%'}), 
 ],
 )
+
 
 
 # Define the callback
@@ -95,7 +96,7 @@ def displayHeatMap(attr):
                             )
     # Update figure layout
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0},
-                      coloraxis_colorbar = dict(orientation = 'h', yanchor = 'bottom', y = -0.1))
+                      coloraxis_colorbar = dict(orientation = 'h', yanchor = 'bottom', y = -0.15))
 
     return fig
 
