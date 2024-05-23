@@ -1,9 +1,10 @@
 # Imports 
 import dash
 import pandas as pd 
-import dash_bootstrap_components as dbc
 import plotly.express as px
 import plotly.graph_objects as go
+from dash.exceptions import PreventUpdate
+import dash_bootstrap_components as dbc
 from dash import html, dcc, Input, Output, callback
 
 # Load data once
@@ -13,6 +14,9 @@ df = pd.read_csv(data_dir)
 # Get a list of attributes to display 
 column_list = ["Speed", "Heading", "Avg. Heading"]
 attr_list = [column for column in df.columns if column in column_list]
+
+# Create list of Years 
+year_list = [2022, 2023]
 
 # Register page 
 dash.register_page(__name__, top_nav = True, name = 'Heat Map')
@@ -50,13 +54,18 @@ navbar = dbc.Navbar(
         dbc.Row([
             dbc.Col([
                 dcc.Dropdown(id='inset',
-                             value=attr_list[1],
-                             options=[{'label': attr, 'value': attr} for attr in attr_list],
-                             placeholder="Select an attribute",
-                             style={'fontFamily': 'sans-serif', 'color': 'black', 'width': '100%'}
-                             )
-            ], width=4, style={'minWidth': '200px'}) 
-        ], className="g-0 ms-auto flex-nowrap mt-3 mt-md-0", align="center"),
+                             value = attr_list[1],
+                             options = [{'label': attr, 'value': attr} for attr in attr_list],
+                             placeholder = "Select an attribute",
+                             style = {'fontFamily': 'sans-serif', 'color': 'black', 'width': '100%'}
+                             ),
+                dcc.Dropdown(id = "year-dropdown",
+                          value = year_list[0],
+                          options = [{'label': year, 'value': year} for year in year_list],
+                          placeholder = "Select year",
+                          style = {'fontFamily': 'sans-serif', 'color': 'black', 'width': '100%'})
+            ], width = 4, style = {'minWidth': '200px'}),
+        ], className = "g-0 ms-auto flex-nowrap mt-3 mt-md-0", align = "center"),
     ]),
     dark = False,
     fixed = "top",
@@ -84,13 +93,20 @@ layout = html.Div([
 # Define the callback
 @callback(
     Output('heat-map', 'figure'),
-    Input('inset', 'value')
+    Input('year-dropdown', 'value'),
+    Input('inset', 'value'),
+    
 )
-def displayHeatMap(attr):
+def displayHeatMap(year, attr):
+    # if not year:
+    #     raise PreventUpdate
+    df = pd.read_csv(data_dir)
+    df = df[df['Year'] == year]
+
     # Create the updated figure
-    fig = px.density_mapbox(df, lat='Latitude', lon='Longitude', z=attr, radius=10,
-                            center=dict(lat=5.4839085, lon=-0.1852226), zoom=10,
-                            mapbox_style="open-street-map",
+    fig = px.density_mapbox(df, lat = 'Latitude', lon = 'Longitude', z = attr, radius = 10,
+                            center = dict(lat = 5.4839085, lon = -0.1852226), zoom = 10,
+                            mapbox_style = "open-street-map",
                             )
     # Update figure layout
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0},
