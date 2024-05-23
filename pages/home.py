@@ -30,9 +30,9 @@ layout = html.Div([
                     html.A([
                         html.Span("View Time Series")
                     ], href = "/series"),
-                    html.A([
-                        html.Span("View Raw Data")
-                    ], href = "/table")
+                    # html.A([
+                    #     html.Span("View Raw Data")
+                    # ], href = "/table")
                 ], id = "index-info")
             ], className = "d-flex h-100 w-100 justify-content-center align-items-center")
         ], id = "index-overlay")
